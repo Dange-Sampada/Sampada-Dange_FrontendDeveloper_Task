@@ -1,0 +1,24 @@
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+
+const Sidebar = () => {
+  const links = [
+    {to:'/',label:'Home'},
+    {to:'/about',label:'About'},
+    {to:'/contact',label:'Contact'},
+  ]
+  return (
+    <>
+      <div className='fixed top-10 md:top-[60px] w-1/5 h-full flex flex-col items-center bg-[#2c2c2c] text-[#f5f5f5] pt-14 transition-all duration-300 ease-in'>
+        {/* <NavLink to='/' className='pb-4 text-lg'>Home</NavLink>
+        <NavLink to='/about' className='pb-4 text-lg'>About</NavLink>
+        <NavLink to='/contact' className='pb-4 text-lg'>Contact</NavLink> */}
+        {links.map((link)=>(
+          <NavLink className={({isActive})=>`${isActive ? "text-[#bb86fc] font-semibold" : ""} text-xs sm:text-lg px-4 py-1 md:py-3 text-[#afaeae] hover:text-[#bb86fc]`} key={link.to} to={link.to}>{link.label}</NavLink>
+        ))}
+      </div>
+    </>
+  )
+}
+
+export default Sidebar

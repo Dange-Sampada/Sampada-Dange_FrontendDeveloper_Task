@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.theme3 {
+    background: linear-gradient(to right, #fbc2eb, #a6c1ee);
+    color: #3b2f4a;
+    font-family: "Pacifico", cursive;
+    font: normal;
+    transition: background 0.8s ease-in, color 0.8s ease-in;
+}
+
+.theme3 header {
+    background: rgba(255, 255, 255, 0.85);
+    /* color: #ff6f61; */
+    backdrop-filter: blur(6px);
+    box-shadow: 0 2px 10px rgba(59, 47, 74, 0.1);
+}
+
+.theme3 .nav-link-active {
+    color: #007bff;
+    font-weight: 600;
+}
+
+.theme3 .mobile-nav {
+    background: #f8f9fa;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+
+.theme3 button {
+    background-color: rgba(175, 78, 204, 0.13);
+}
+
+.theme3 button:hover {
+    background-color: #3b2f4ac9;
+    color: #f8f9fa;
+}

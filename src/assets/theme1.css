@@ -1,0 +1,33 @@
+.theme1 {
+  background: #f8f9fa;
+  color: #2c3e50;
+  font-family: sans-serif;
+  transition: background 0.8s ease-in, color 0.8s ease-in;
+}
+
+.theme1 header{
+  background-color: #ffffff;
+  color: #2c3e50;
+}
+
+.theme1 .nav-link-active{
+  color: #007bff;
+  font-weight: 600;
+}
+
+.theme1 .mobile-nav{
+  background: #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid #e0e0e0;
+}
+
+
+.theme1 button{
+  background-color: #ffffff;
+}
+
+.theme1 button:hover{
+  background-color: #2c3e50;
+  color: #f8f9fa;
+}
+
