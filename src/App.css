@@ -1,10 +1,19 @@
 
-#root {
-  /* max-width: 1280px; */
-}
 *{
-  /* margin: 0; */
-  /* padding: 0; */
   box-sizing: border-box;
 }
+/* Smooth color and background transitions */
+.theme1, .theme2, .theme3 {
+  /* min-height: 100vh; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
 
+/* Subtle fade effect */
+.theme-fade {
+  animation: fadeTheme 0.3s ease;
+}
+
+@keyframes fadeTheme {
+  from { opacity: 0.7; }
+  to { opacity: 1; }
+}

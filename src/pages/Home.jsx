@@ -6,6 +6,7 @@ const Home = () => {
   const { theme } = useContext(ThemeContext)
   const [products, setProducts] = useState([])
   const [loading, setLoading] = useState(false)
+  const [list, setList] = useState(false)
 
   const apiRes = async () => {
     setLoading(true)
@@ -32,7 +33,7 @@ const Home = () => {
             ) : (
               <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 bg-[rgba(255, 255, 255, 0.2)] rounded-2xl">
                 {products.map((prod) => (
-                  <Card key={prod.id} title={prod.title} image={prod.thumbnail} price={prod.price} loading={loading}/>)
+                  <Card key={prod.id} title={prod.title} image={prod.thumbnail} price={prod.price} loading={loading} />)
                 )}
               </div>
             )}
@@ -46,8 +47,17 @@ const Home = () => {
             <div className='flex flex-col items-center text-center'>
               <h1 className='text-base sm:text-2xl md:text-3xl lg:text-5xl'>Welcome to Our Store</h1>
               <p className='py-2 text-xs sm:text-lg lg:text-xl'>Explore our wide range of products.</p>
-              <button type='button' className='border rounded-sm py-1 px-2 sm:px-3 text-xs sm:text-base cursor-pointer'>Explore Now</button>
+              <button type='button' onClick={() => setList(!list)} className='border rounded-sm py-1 px-2 sm:px-3 text-xs sm:text-base cursor-pointer'>Explore Now</button>
             </div>
+            
+            <ul
+              className={`w-fit mx-auto border rounded-sm px-5 py-3 md:px-10 md:py-10 mt-6 text-xs sm:text-lg origin-top transform transition-all duration-500 ease-in-out
+              ${list ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 h-0 overflow-hidden"}`}
+            >
+              <li>Quality Products</li>
+              <li>Best Prices</li>
+              <li>Fast Delivery</li>
+            </ul>
           </div>
 
         </>

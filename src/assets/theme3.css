@@ -5,7 +5,7 @@
     color: #3b2f4a;
     font-family: "Pacifico", cursive;
     font: normal;
-    transition: background 0.8s ease-in, color 0.8s ease-in;
+    /* transition: background 0.8s ease-in, color 0.8s ease-in; */
 }
 
 .theme3 header {
