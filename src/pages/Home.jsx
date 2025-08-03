@@ -18,7 +18,20 @@ const Home = () => {
 
   useEffect(() => {
     apiRes()
+
+    const listDisplay = localStorage.getItem("listData")
+    if (listDisplay) {
+      setList(JSON.parse(listDisplay))
+    }
   }, []);
+
+  const listToggle =()=>{
+    const listShow = !list
+    setList(listShow)
+    // if(list){
+      localStorage.setItem("listData",JSON.stringify(listShow))
+    // }
+  }
 
   return (
     <>
@@ -47,9 +60,9 @@ const Home = () => {
             <div className='flex flex-col items-center text-center'>
               <h1 className='text-base sm:text-2xl md:text-3xl lg:text-5xl'>Welcome to Our Store</h1>
               <p className='py-2 text-xs sm:text-lg lg:text-xl'>Explore our wide range of products.</p>
-              <button type='button' onClick={() => setList(!list)} className='border rounded-sm py-1 px-2 sm:px-3 text-xs sm:text-base cursor-pointer'>Explore Now</button>
+              <button type='button' onClick={listToggle} className='border rounded-sm py-1 px-2 sm:px-3 text-xs sm:text-base cursor-pointer'>Explore Now</button>
             </div>
-            
+
             <ul
               className={`w-fit mx-auto border rounded-sm px-5 py-3 md:px-10 md:py-10 mt-6 text-xs sm:text-lg origin-top transform transition-all duration-500 ease-in-out
               ${list ? "scale-y-100 opacity-100" : "scale-y-0 opacity-0 h-0 overflow-hidden"}`}

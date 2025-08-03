@@ -8,6 +8,8 @@
 .theme1 header{
   background-color: #ffffff;
   color: #2c3e50;
+  border-bottom: 1px solid #f8f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .theme1 .nav-link-active{
@@ -18,7 +20,7 @@
 .theme1 .mobile-nav{
   background: #f8f9fa;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #f8f9fa;
 }
 
 

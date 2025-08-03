@@ -8,13 +8,15 @@
 .theme2 header {
     background-color: #1e293b;
     color: #ffffff	;
+    border-bottom: 1px solid #0f172a;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 
 .theme2 .mobile-nav {
     background: #1e293b;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #1e293b;
 }
 
 .theme2 button {

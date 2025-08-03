@@ -26,7 +26,7 @@ const Header = () => {
     ]
     return (
         <>
-            <header className='fixed z-10 top-0 left-0 py-3 sm:p-3 w-full h-[50px] sm:h-[60px] flex sm:flex-row justify-between items-center border-b border-b-[#e0e0e0]'>
+            <header className='fixed z-10 top-0 left-0 py-3 sm:p-3 w-full h-[50px] sm:h-[60px] flex sm:flex-row justify-between items-center border-b'>
                 <div className='flex justify-between items-center p-3 sm:block w-full sm:w-auto'>
                     <div className='font-bold'>MultiThemeApp </div>
                     <button type="button" className={`sm:hidden text-lg md:text-2xl border rounded-sm p-1`} onClick={toggleMenu}>
