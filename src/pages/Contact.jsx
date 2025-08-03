@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import ThemeContext from '../context/ThemeContext'
 
 const Contact = () => {
@@ -9,8 +9,18 @@ const Contact = () => {
     email: ''
   })
 
+  useEffect(()=>{
+    const contactData = localStorage.getItem("contactForm")
+    if(contactData){
+      setInputVal(JSON.parse(contactData))
+      setShowData(true)
+    }
+  },[])
+
   const handleChange = (e)=>{
-    setInputVal({ ...inputVal, [e.target.name]: e.target.value })
+    const newData = { ...inputVal, [e.target.name]: e.target.value }
+    setInputVal(newData)
+    localStorage.setItem('contactForm',JSON.stringify(newData))
   }
 
   const handleSubmit = (e) => {
@@ -21,6 +31,7 @@ const Contact = () => {
   const handleReset =()=>{
     setInputVal({username:'',email:''})
     setShowData(false)
+    localStorage.removeItem('contactForm')
   }
 
   return (
